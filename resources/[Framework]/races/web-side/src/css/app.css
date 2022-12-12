@@ -1,0 +1,374 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	user-select: none;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+}
+
+#infos {
+	position: absolute;
+	top: 5vh;
+	right: 0;
+	display: flex;
+	color: #fff;
+	text-align: right;
+	padding: 50px 80px;
+	flex-direction: column;
+}
+
+#infos::before {
+	content: "";
+	width: 500%;
+	height: 500%;
+	top: 0;
+	right: 0;
+	position: absolute;
+	/* background: linear-gradient(
+		238.11deg,
+		rgba(53, 151, 118, 0.199) 0%,
+		rgba(0, 0, 0, 0) 27.56%
+	); */
+}
+
+#infos h1 {
+	font-size: 3vw;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+}
+
+#infos h1 sub {
+	position: relative;
+	top: -5px;
+	font-size: 1.5vw;
+}
+
+#infos span {
+	margin-top: 8px;
+	letter-spacing: 2px;
+}
+
+#race-stats {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	transform: translate(-50%, -50%);
+}
+
+#race-stats h1 {
+	position: relative;
+	color: #fff;
+	font-size: 1.5vw;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+#race-stats h1::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 300px;
+	height: 50px;
+	transform: translate(-50%, -50%);
+	background: radial-gradient(
+		49.48% 49.48% at 50.13% 50.52%,
+		rgba(72, 169, 137, 0.455) 0%,
+		rgba(0, 0, 0, 0) 100%
+	);
+}
+
+#race-stats b {
+	color: #48a989;
+}
+
+#race-stats .win {
+	display: flex;
+	color: #fff;
+	margin-top: 20px;
+	text-align: center;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	text-transform: uppercase;
+}
+
+#race-stats .win small {
+	font-size: 10px;
+	letter-spacing: 1px;
+}
+
+#race-stats .win strong {
+	font-size: 25px;
+	margin-top: 5px;
+}
+
+#race-stats .win img {
+	max-width: 15%;
+	margin-top: 5px;
+}
+
+#race-stats section {
+	margin-top: 20px;
+}
+
+#race-stats section .item {
+	height: 60px;
+	display: flex;
+	color: #fff;
+	margin-top: 10px;
+	border-radius: 5px;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.4);
+}
+
+#race-stats section .item .row {
+	display: flex;
+	width: 50%;
+	padding: 0 15px;
+	border-right: 2px solid rgb(43, 43, 43);
+	align-items: center;
+}
+
+#race-stats section .item .row:last-child {
+	border: 0;
+}
+
+#race-stats section .item .row svg {
+	font-size: 25px;
+	margin-right: 10px !important;
+}
+
+.row .info {
+	display: flex;
+	flex-direction: column;
+	text-transform: uppercase;
+}
+
+.row .info small {
+	opacity: 0.5;
+	font-size: 10px;
+	letter-spacing: 1px;
+}
+
+largada {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: flex;
+	color: #fff;
+	font-size: 5vw;
+	font-weight: bold;
+	transition: all 0.3s;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	transform: translate(-50%, -50%);
+}
+
+largada span {
+	font-size: 1.5vw;
+}
+
+largada h1 {
+	color: #fff;
+	font-size: 5vw;
+	font-weight: bold;
+}
+
+.finish {
+	color: #48a989;
+}
+
+#race-results {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#race-results * {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#race-results header {
+	width: 800px;
+	display: flex;
+	padding: 0 20px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#race-results header .raceCamp {
+	position: relative;
+	width: 200px;
+	height: 30px;
+	display: flex;
+	padding: 0 10px;
+	align-items: center;
+	justify-content: space-between;
+	background: linear-gradient(
+		to right,
+		transparent,
+		rgba(0, 0, 0, 0.4),
+		rgba(0, 0, 0, 0.4),
+		transparent
+	);
+}
+
+#race-results header .raceCamp small {
+	position: absolute;
+	left: 50%;
+	top: -15px;
+	opacity: 0.5;
+	color: #fff;
+	font-size: 10px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transform: translate(-50%, 0);
+}
+
+#race-results header .raceCamp .result {
+	color: #fff;
+	font-size: 12px;
+}
+
+#race-results header .raceCamp .arrow {
+	color: #fff;
+}
+
+#race-results header input {
+	border: 0;
+	width: 200px;
+	height: 30px;
+	outline: none;
+	color: #ddd;
+	text-align: center;
+	background: linear-gradient(
+		to right,
+		transparent,
+		rgba(0, 0, 0, 0.4),
+		rgba(0, 0, 0, 0.4),
+		transparent
+	);
+}
+
+#race-results header input::placeholder {
+	position: relative;
+	top: -1px;
+	color: #ddd;
+	font-size: 8px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+#race-results h1 {
+	position: relative;
+	color: #fff;
+	font-size: 20px;
+	margin-bottom: 30px;
+	letter-spacing: 5px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#race-results h1 sub {
+	position: relative;
+	top: -5px;
+	opacity: 0.5;
+	font-size: 10px;
+	font-weight: 400;
+	letter-spacing: 5px;
+}
+
+#race-results main {
+	width: 800px;
+	height: 500px;
+}
+
+#race-results main table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#race-results main table thead {
+	position: relative;
+	top: -5px;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+#race-results main table thead td {
+	padding: 10px;
+	font-weight: bold;
+	font-size: 20px;
+	letter-spacing: 1px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#race-results main table tbody {
+	color: #fff;
+}
+
+#race-results main table tbody tr {
+	height: 50px;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+#race-results main table tbody tr:last-child {
+	border: 0;
+}
+
+#race-results main table tbody td {
+	font-size: 12px;
+	text-align: center;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+#esc-text {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, -50%);
+}
+
+#esc-text h1 {
+    color: white;
+    font-size: 15px;
+    font-weight: 350;
+}
+
+#esc-text h1 span{
+    background: rgba(158, 158, 158, 0.665);
+    color: #fff;
+    padding: 5px 15px;
+    font-weight: 600;
+}
